@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travelify/misc/colors.dart';
+import 'package:travelify/utils/colors.dart';
 import 'package:travelify/widgets/app_large_text.dart';
 import 'package:travelify/widgets/app_text.dart';
 import 'package:travelify/widgets/responsive_button.dart';
