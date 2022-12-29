@@ -1,3 +1,4 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:travelify/utils/colors.dart';
 import 'package:travelify/widgets/app_large_text.dart';
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     'balloning.png': 'Balloning',
     'hiking.png': 'Hiking',
     'kayaking.png': 'Kayaking',
-    'snorkling.png': 'Snorkling',
+    'snorkeling.png': 'Snorkeling',
   };
 
   @override
@@ -33,10 +34,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(
-                  Icons.menu,
-                  size: 30,
-                  color: Colors.black54,
+                const RotatedBox(
+                  quarterTurns: 1,
+                  child: Icon(
+                    FluentSystemIcons.ic_fluent_data_bar_vertical_filled,
+                    size: 30,
+                    color: Colors.black54,
+                  ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(right: 20),
@@ -150,7 +154,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
+                          color: AppColors.containerBackground,
                           image: DecorationImage(
                             image: AssetImage(
                                 'assets/images/${images.keys.elementAt(index)}'),

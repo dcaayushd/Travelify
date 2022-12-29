@@ -64,7 +64,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         ),
                       ),
                       SizedBox(height: 40),
-                      ResponsiveButton(
+                      AppResponsiveButton(
                         width: 120,
                       ),
                     ],
