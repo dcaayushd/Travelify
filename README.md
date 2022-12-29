@@ -1,6 +1,6 @@
 # travelify
 
-A new Flutter project.
+A new Flutter project showing you the palces and things required for you to have a better tarvel experience.
 
 ## Getting Started
 
