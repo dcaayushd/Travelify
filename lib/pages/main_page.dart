@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:travelify/pages/home_page.dart';
-import 'package:travelify/pages/nav_pages/bar_items_page.dart';
-import 'package:travelify/pages/nav_pages/profile_page.dart';
-import 'package:travelify/pages/nav_pages/search_page.dart';
+import 'package:travelify/navigation/bar_items_page.dart';
+import 'package:travelify/navigation/profile_page.dart';
+import 'package:travelify/navigation/search_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:travelify/cubit/app_cubits.dart';
 import 'package:travelify/utils/colors.dart';
 import 'package:travelify/widgets/app_large_text.dart';
 import 'package:travelify/widgets/app_text.dart';
@@ -47,14 +49,14 @@ class _WelcomePageState extends State<WelcomePage> {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      AppLargeText(text: 'Trips'),
-                      AppText(
+                    children: [
+                      const AppLargeText(text: 'Trips'),
+                      const AppText(
                         text: 'Mountain',
                         size: 30,
                       ),
-                      SizedBox(height: 20),
-                      SizedBox(
+                      const SizedBox(height: 20),
+                      const SizedBox(
                         width: 250,
                         child: AppText(
                           text:
@@ -63,9 +65,20 @@ class _WelcomePageState extends State<WelcomePage> {
                           size: 14,
                         ),
                       ),
-                      SizedBox(height: 40),
-                      AppResponsiveButton(
-                        width: 120,
+                      const SizedBox(height: 40),
+                      GestureDetector(
+                        onTap: () =>
+                            BlocProvider.of<AppCubits>(context).getData(),
+                        child: SizedBox(
+                          width: 200,
+                          child: Row(
+                            children: const [
+                              AppResponsiveButton(
+                                width: 120,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -86,7 +99,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         );
                       },
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
